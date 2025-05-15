@@ -19,6 +19,10 @@ Welcome to **LionSights**, an intelligent chatbot designed to enhance your trave
   - **Detailed Descriptions**: Get comprehensive information about each location.
   - **Current Events & Deals**: View active promotions and special events.
   - **Visual Navigation**: Interactive maps to help you find your way.
+- **Review Integration**:
+  - **Recent Reviews**: Access the latest reviews from TripAdvisor.
+  - **Event Updates**: Get current 2025 events from TimeOut Singapore.
+  - **Rating Information**: View overall ratings and detailed reviews.
 
 ## Getting Started
 To get started with LionSights, simply clone this repository and follow the setup instructions in the [Installation](#installation) section.
@@ -30,27 +34,52 @@ git clone https://github.com/yourusername/lionsights.git
 cd lionsights
 ```
 
-2. Install the required dependencies:
+2. Create and activate a virtual environment:
+```bash
+# On Windows
+python -m venv venv
+venv\Scripts\activate
+
+# On macOS/Linux
+python -m venv venv
+source venv/bin/activate
+```
+
+3. Install the required dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Set up your OpenAI API key:
-   - Create a `.streamlit/secrets.toml` file
+4. Set up your OpenAI API key:
+   - Create a `.env` file in the project root
    - Add your OpenAI API key:
-   ```toml
-   OPENAI_API_KEY = "your-api-key-here"
+   ```
+   OPENAI_API_KEY=your-api-key-here
    ```
 
-4. Run the application:
+5. Run the application:
 ```bash
 streamlit run app.py
 ```
+
+## Security Features
+LionSights implements several security measures to ensure a safe and reliable experience:
+- **Input Validation**: All user inputs are validated and sanitized
+- **Rate Limiting**: Prevents abuse by limiting request frequency
+- **Secure Logging**: Comprehensive logging system for monitoring and debugging
+- **Error Handling**: Robust error handling and user-friendly error messages
+- **Dependency Security**: Pinned package versions for stability
 
 ## Contributing
 We welcome contributions! Please check out our [Contributing Guidelines](CONTRIBUTING.md) for more information.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+If you encounter any issues or have questions, please:
+1. Check the [Issues](https://github.com/yourusername/lionsights/issues) page
+2. Create a new issue if your problem hasn't been reported
+3. Join our [Discord community](https://discord.gg/lionsights) for real-time support
 
 Join us on this exciting journey to explore the wonders of Singapore with LionSights!
