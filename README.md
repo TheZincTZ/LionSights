@@ -11,9 +11,41 @@ Welcome to **LionSights**, an intelligent chatbot designed to enhance your trave
 - **Interactive Conversations**: Engage in natural language conversations for a seamless experience.
 - **Up-to-Date Information**: Stay informed with the latest events, promotions, and travel tips.
 - **User-Friendly Interface**: Easy to use, making your travel planning a breeze.
+- **Visual Experience**: 
+  - **Interactive Maps**: View locations on an interactive map with precise coordinates.
+  - **Image Gallery**: Browse through high-quality images of attractions.
+  - **Current Events**: Stay updated with ongoing events and special deals.
+- **Location Intelligence**:
+  - **Detailed Descriptions**: Get comprehensive information about each location.
+  - **Current Events & Deals**: View active promotions and special events.
+  - **Visual Navigation**: Interactive maps to help you find your way.
 
 ## Getting Started
 To get started with LionSights, simply clone this repository and follow the setup instructions in the [Installation](#installation) section.
+
+## Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/lionsights.git
+cd lionsights
+```
+
+2. Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Set up your OpenAI API key:
+   - Create a `.streamlit/secrets.toml` file
+   - Add your OpenAI API key:
+   ```toml
+   OPENAI_API_KEY = "your-api-key-here"
+   ```
+
+4. Run the application:
+```bash
+streamlit run app.py
+```
 
 ## Contributing
 We welcome contributions! Please check out our [Contributing Guidelines](CONTRIBUTING.md) for more information.

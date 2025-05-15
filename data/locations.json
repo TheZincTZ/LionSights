@@ -1,0 +1,42 @@
+{
+    "Marina Bay Sands": {
+        "description": "Marina Bay Sands is an iconic integrated resort in Singapore, featuring the world's largest rooftop infinity pool, luxury shopping, celebrity chef restaurants, and the world-class Marina Bay Sands Casino.",
+        "images": [
+            "https://images.unsplash.com/photo-1525625293386-3f8f99389edd",
+            "https://images.unsplash.com/photo-1548919973-5cef591cdbc9",
+            "https://images.unsplash.com/photo-1525625293386-3f8f99389edd"
+        ],
+        "events": [
+            {
+                "title": "Summer Spectacular",
+                "description": "Enjoy special rates on luxury suites and exclusive access to the infinity pool.",
+                "valid_until": "2024-08-31"
+            },
+            {
+                "title": "Dining Package",
+                "description": "3-course dinner at CUT by Wolfgang Puck with complimentary wine pairing.",
+                "valid_until": "2024-07-31"
+            }
+        ]
+    },
+    "Gardens by the Bay": {
+        "description": "Gardens by the Bay is a nature park spanning 101 hectares in central Singapore. It features the iconic Supertree Grove, Cloud Forest, and Flower Dome conservatories.",
+        "images": [
+            "https://images.unsplash.com/photo-1525625293386-3f8f99389edd",
+            "https://images.unsplash.com/photo-1548919973-5cef591cdbc9",
+            "https://images.unsplash.com/photo-1525625293386-3f8f99389edd"
+        ],
+        "events": [
+            {
+                "title": "Garden Rhapsody Light Show",
+                "description": "Daily light and sound show at the Supertree Grove. Free admission.",
+                "valid_until": "2024-12-31"
+            },
+            {
+                "title": "Orchid Extravaganza",
+                "description": "Special exhibition featuring rare and exotic orchids in the Flower Dome.",
+                "valid_until": "2024-06-30"
+            }
+        ]
+    }
+} 
