@@ -3,6 +3,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
 from location_data import LocationData
+from reviews_data import ReviewsData
 from security import SecurityManager
 import config
 import streamlit as st
@@ -30,6 +31,7 @@ class LionSightsChatbot:
             verbose=True
         )
         self.location_data = LocationData()
+        self.reviews_data = ReviewsData()
         self.security = SecurityManager()
         
     def get_response(self, user_input):
@@ -61,8 +63,22 @@ class LionSightsChatbot:
             # Check if the response mentions any known locations
             for location in self.location_data.locations.keys():
                 if location.lower() in sanitized_input.lower():
+                    # Get reviews and current events
+                    reviews = self.reviews_data.get_place_reviews(location)
+                    current_events = self.reviews_data.get_current_events(location)
+                    
+                    # Format and display the information
+                    reviews_response = self.reviews_data.format_reviews_response(
+                        location,
+                        reviews,
+                        current_events
+                    )
+                    
                     # Display location information
                     self.location_data.display_location_info(location)
+                    
+                    # Add reviews to the response
+                    response.content += "\n\n" + reviews_response
             
             # Log the interaction
             logger.info(f"User query: {sanitized_input[:100]}...")  # Log first 100 chars only
