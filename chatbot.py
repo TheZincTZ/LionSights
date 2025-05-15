@@ -1,4 +1,4 @@
-from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 class LionSightsChatbot:
     def __init__(self):
         self.llm = ChatOpenAI(
-            model_name=config.MODEL_NAME,
+            model=config.MODEL_NAME,
             temperature=0.7,
             api_key=config.OPENAI_API_KEY
         )
